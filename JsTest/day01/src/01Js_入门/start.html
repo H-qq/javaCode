@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js的入门程序</title>
+</head>
+<body>
+
+        <!--定义一个按钮 -->
+    <button type="button" id="helloBtn">SayHello</button>
+    <!--
+      目标：点击按钮弹出警告框
+    -->
+    <script type="text/javascript">
+        //1.通过Js代码获得按钮对象
+        //document 代表当前Html
+        var btn = document.getElementById("helloBtn")
+
+        //2.给获取到的btn 对象绑定点击事件
+        btn.onclick = function (){
+            //弹出警告框
+            alert("hello,world!")
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>声明和创建函数</title>
+</head>
+<body>
+    <script>
+        //声明函数两种方式 1.命名函数（普通）
+        function showMessage(message){
+            console.log(message)
+        }
+
+        //匿名函数：就是声明函数时候不取名，匿名函数有自己独特的使用场景
+        var sum = function (a,b){
+            console.log("求"+a+"+和"+b+"值")
+            return a+b
+        }
+
+
+        //调用函数
+        this.showMessage("你好世界")
+
+        //js的函数，声明时和调用时参数个数可以不一致，所以在Js中没有重载的定义，如果同
+        //出现同名函数 优先调用后面的
+        var total = sum(3,4);
+        console.log(total)
+    </script>
+</body>
+</html>

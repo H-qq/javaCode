@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>js事件驱动</title>
+</head>
+<body>
+    <!--
+        什么是事件驱动：让文档的标签能响应用户交互动作
+        事件驱动中的要素：
+         1.事件源：事件发生在哪
+         2.事件类型：用户的交互动作
+         3.事件源与事件类型进行绑定：要给谁绑定一个什么事件
+         4.绑定之后，当事件触发，我们要执行要触发的函数
+
+    -->
+    <input type="button" value="按钮" onclick="fn1()"/><br/>
+    <input type="button" id="btn" value="另一个按钮"/>
+    <script>
+        function fn1(){
+            alert("被点击了")
+        }
+
+        //另一种绑定  动态绑定 匿名函数绑定
+        var btnElement = document.getElementById("btn");
+        btnElement.onclick = function (){
+            alert("也被点击了！")
+        }
+    </script>
+</body>
+</html>

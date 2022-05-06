@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+</head>
+<body>
+    <script>
+        //在js中使用new的方式创建对象
+        var obj1 = new Object()
+        //给对象赋值
+        obj1.age = 10
+        obj1.name = "jay"
+        obj1.address = "中国台湾省"
+        console.log(obj1.name)
+
+        //在js中使用{} 创建对象
+        var obj2 = {
+            "name":"aobama",
+            "age":10,
+            "address":"召唤师",
+            "showMessage":function (message){
+                console.log(message)
+            },
+            "showName":function (){
+                console.log(this.name)
+            }
+        }
+        obj2.showMessage(obj2.age)
+        obj2.showName()
+        obj2.showMessage("hello,world")
+        console.log(obj2)
+    </script>
+</body>
+</html>

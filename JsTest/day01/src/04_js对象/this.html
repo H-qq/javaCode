@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this介绍</title>
+</head>
+<body>
+    <script>
+        var name = "周杰伦"
+        this.name = "双杰伦"
+        function showName(message){
+            console.log(message)
+
+        var obj1 = {
+            "name":"奥拉夫",
+            "showMessage":function (message){
+                console.log(message)
+            }
+        }
+        obj2.showMessage(obj1.name)
+        this.showMessage()
+        obj1.showMessage()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合案例</title>
+    <style>
+        table,tr,td,th{
+            border:1px solid black;
+            width :500px;
+            text-align: center;
+            margin: auto;
+        }
+        div{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <table  cellpadding="0" id="tb">
+        <tr>
+            <th>序号</th>
+            <th>用户名</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>小七</td>
+            <td>女</td>
+            <td>
+                <button onclick=" deletePerson(this)">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>七七</td>
+            <td>女</td>
+            <td>
+                <button onclick=" deletePerson(this)">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>笨七</td>
+            <td>女</td>
+            <td>
+                <button onclick=" deletePerson(this)">删除</button>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <form action="#">
+            序&nbsp&nbsp&nbsp&nbsp号<input type="text"name="num"id="num"><br/>
+            用户名<input type="text" name="username" id="username"/><br/>
+            性&nbsp&nbsp&nbsp&nbsp别<input type="text" name="gender" id="gender"/><br/>
+             <input type="button" value="添加用户"  onclick="addPerson()"/><br/>
+        </form>
+    </div>
+
+    <script>
+        //目标点击删除按钮，删除当前行
+        //给所有按钮绑定点击事件
+        function deletePerson(obj){
+            //此时obj就是你点击的按钮
+            //我们要删除的就是obj的父类的父类
+            obj.parentElement.parentElement.remove();
+        }
+        function addPerson(){
+            //获取序号
+            var numElement = document.getElementById("num");
+            var num = numElement.value;
+
+            var nameElement = document.getElementById("username");
+            var name = nameElement.value;
+
+            var genElement = document.getElementById("gender");
+            var gen = genElement.value;
+
+            //将获取到的序号、用户名、性别添加到td中，然后到tr 然后到table
+            //创建一行
+            var trElement = document.createElement("tr");
+
+            //将tr添加到标签内容
+            trElement.innerHTML="<td>"+num+"</td>\n"+"<td>"+name+"</td>\n"+"<td>"+gen+"</td>\n"+" <td>\n" +
+                "                <button onclick=\" deletePerson(this)\">删除</button>\n" +
+                "            </td>"
+
+            //将tr添加到表格中
+            var td = document.getElementById("tb");
+            td.appendChild(trElement)
+            //最后清空文本框
+            numElement.value = "";
+            nameElement.value = "";
+            genElement.value = "";
+        }
+    </script>
+</body>
+</html>

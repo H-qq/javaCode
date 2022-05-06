@@ -1,0 +1,32 @@
+package test;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class HellowTest {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int []nums = new int[7];
+		for (int i = 0; i < 7; i++) {
+            nums[i] = scanner.nextInt();
+        }
+		Arrays.sort(nums);
+		int minNum = nums[0];
+		int maxNum = nums[6];
+		int addBc = maxNum-minNum;
+		int b = 0;
+		int c = 0;
+		for (int i = 1; i < 6; i++) {
+			b = nums[i];
+			for (int j = i+1; j < 6; j++) {
+				if (addBc == b+nums[j]) {
+					c = nums[j];
+					break;
+				}
+			}
+		}
+		System.out.print(minNum+","+b+","+c);
+
+	}
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>change事件介绍</title>
+</head>
+<body>
+    <!--内容改变（onchange）-->
+    <label>
+        <select id="city" onchange="fn1(this)">
+            <option value="bj">北京</option>
+            <option value="sh">上海</option>
+            <option value="xm">厦门</option>
+            <option value="sz">深圳</option>
+        </select>
+    </label>
+
+    <script>
+        //目标：当下拉框的城市名发生改变时候，我们都获取当前下拉框显示的那个城市名
+        function fn1(obj){
+            //要获取下拉框的内容 ，其实就是获取select对象的值 value
+           // console.log(obj.value);
+            var value = document.getElementById("city").value;
+            console.log(value)
+        }
+    </script>
+</body>
+</html>

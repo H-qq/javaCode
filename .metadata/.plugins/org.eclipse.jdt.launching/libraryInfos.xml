@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="D:\Jdk8java" version="1.8.0_261">
+<bootpath>
+<entry path="D:\Jdk8java\lib\resources.jar"/>
+<entry path="D:\Jdk8java\lib\rt.jar"/>
+<entry path="D:\Jdk8java\lib\sunrsasign.jar"/>
+<entry path="D:\Jdk8java\lib\jsse.jar"/>
+<entry path="D:\Jdk8java\lib\jce.jar"/>
+<entry path="D:\Jdk8java\lib\charsets.jar"/>
+<entry path="D:\Jdk8java\lib\jfr.jar"/>
+<entry path="D:\Jdk8java\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\Jdk8java\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\Jdk8java\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

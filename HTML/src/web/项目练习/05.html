@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景图片</title>
+  <style>
+    body{
+        background: url("../img/bg.png");
+    }
+  </style>
+</head>
+<body>
+    <!--get 方式表单 -->
+    <form action="#" method="get" autocomplete="off">
+        <label for="username">用户名：</label>
+       <input type="text" id="username" name = "username" value="" placeholder="请在此处输入用户名" required/>
+        <br/>
+        <label for="password">密码：</label>
+        <input type="password" id="password" name = "password" value="" placeholder="请在此处输入密码" required/>
+        <br/>
+        <label for="email">邮箱：</label>
+        <input type="email" id="email" name = "email" value="" placeholder="请在此处输入邮箱" required/>
+        <br/>
+        <label for="gender">性别：</label>
+        <input type="radio" id="gender" name = "gender" value="man" placeholder="请在此处输入密码" required/>男
+        <input type="radio"  name = "gender" value="women" placeholder="请在此处输入密码" required/>女
+        <br/>
+        <label for="hobby">爱好：</label>
+        <input type="checkbox" id="hobby" name="hobby" value="music"/>音乐
+        <input type="checkbox" name="hobby" value="bask"/>篮球
+        <input type="checkbox"  name="hobby" value="footb"/>足球
+        <br/>
+        <label for="birthday">生日日期：</label>
+        <input type="date" id="birthday" name = "birthday" value="" placeholder="请在此处输入密码" required/>
+        <br/>
+        <label for="time">当前时间：</label>
+        <input type="time" id="time" name = "time" value="" placeholder="请在此处输入密码" required/>
+        <br/>
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+        <button type="button">按钮</button>
+    </form>
+</body>
+</html>

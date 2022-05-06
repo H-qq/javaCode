@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用事件介绍 -焦点事件</title>
+</head>
+<body>
+    <input type="text" id="ipt" onfocus="foucs1()">
+    <input type="text" id="ipt1">
+    <script>
+        //目标：给输入框绑定获取和失去焦点事件
+        //onfocus 表示获取焦点
+        function foucs1(){
+            console.log("我获取焦点了")
+        }
+        document.getElementById("ipt").onblur = function (){
+            console.log("失去焦点饿了")
+        }
+        var ipt1Event = document.getElementById("ipt1");
+        ipt1Event.onclick = function (){
+            console.log("我也获取焦点了")
+        }
+    </script>
+</body>
+</html>

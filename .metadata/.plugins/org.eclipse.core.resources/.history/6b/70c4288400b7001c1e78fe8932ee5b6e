@@ -1,0 +1,24 @@
+package test;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class HellowTest {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int []nums = new int[7];
+		for (int i = 0; i < 7; i++) {
+            nums[i] = scanner.nextInt();
+        }
+		Arrays.sort(nums);
+		int a = nums[0];
+		int b= nums[1];
+		int c = nums[6]-a-b;
+		
+		
+		
+		System.out.print(a+","+b+","+c);
+
+	}
+}

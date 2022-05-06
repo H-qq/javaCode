@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作标签的属性文本</title>
+</head>
+<body>
+    <input type="text" id="username" name="username" />
+    <div id = "d1">
+        <h1>你好世界</h1>
+    </div>
+    <script>
+        //目标：获取id为username输入框
+        //1.找到需要操作的标签
+        var ipt = document.querySelector("#username");
+        //2.设置value属性值
+        ipt.value = "张三"
+        //3.获取标签value属性的值
+        var value = ipt.value;
+        console.log(value)
+      //4.获取id为d1的div文本信息
+        //获取标签文本：element.innerText 获取文本时 会将左右两端空格去掉
+        var innerText = document.getElementById("d1").innerText;
+        console.log(innerText)
+
+        //获取标签体的内容  空格什么都有
+        let innerHTML = document.getElementById("d1").innerHTML;
+        console.log(innerHTML)
+        //设置标签体内容
+        var innerHTML1 =  document.getElementById("d1").innerHTML = "<h1>hello world</h1>";
+        console.log(innerHTML1)
+
+
+
+
+    </script>
+</body>
+</html>

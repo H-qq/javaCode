@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的数组</title>
+</head>
+<body>
+    <script>
+        //1，创建数组  js的数组长度不是固定,并且数据类型不一定
+        var arr = [1,2,3,"a"]
+        arr[5] = "七七"
+
+        //进行反转数组 reverse()
+        arr.reverse()
+        //join 方法时i将数组中元素通过分隔符拼接字符串
+        console.log(arr.join("&"))
+
+        //字符串 拆分数组  spilt
+        var str = arr.join("&")
+        var arr2 = str.split("&");
+        console.log(arr2)
+
+        //弹出数组最后一个元素,并移除
+        console.log(arr2.pop())
+        //2.遍历数组
+        for (var i = 0;i<arr.length;i++){
+            console.log(arr[i])
+        }
+    </script>
+</body>
+</html>

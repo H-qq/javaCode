@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!--
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+                            <!--
 
-   namespace：名称空间
-  -->
+                               namespace：名称空间
+                              -->
 <mapper namespace="com.ht.mapper.BrandMapper">
     <!--数据库 字段名称 和实体类属性名称 不一样，不能自动封装数据
     * 起别名：对不一样的列名 起别名 让实体类与别名一样
@@ -119,13 +119,13 @@
             <if test="brandName != null and brandName!=''">
                 brand_name = #{brandName},
             </if><if test="companyName != null and companyName!=''">
-                company_name = #{companyName},
+                ,company_name = #{companyName},
             </if><if test="ordered != null and ordered!=''">
-                ordered = #{ordered},
+                ,ordered = #{ordered},
             </if><if test="description != null and description!=''">
-                description = #{description},
+                ,description = #{description},
             </if><if test="status != null and status!=''">
-                 status = #{status}
+                 ,status = #{status}
             </if>
         </set>
         where
